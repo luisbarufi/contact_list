@@ -1,0 +1,22 @@
+pt-BR:
+  activerecord:
+    attributes:
+      default: &default
+        created_at: 'Criado em'
+        updated_at: 'Atualizado em'
+     
+      user:
+        <<: *default
+        name: 'Nome'
+        email: 'Email'
+        password: 'Senha'
+        password_confirmation: 'Senha (confirmação)'
+    
+    errors:
+      messages:
+        blank: 'não pode ser em branco.'
+        invalid: 'inválido.'
+        taken: 'já cadastrado.'
+        confirmation: 'não é igual, Insira a mesma senha.'
+        too_long: 'Muito grande. Máximo %{count} caracteres.'
+        too_short: 'Muito curto. Mínimo %{count} caracteres.'        
