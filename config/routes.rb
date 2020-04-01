@@ -5,7 +5,8 @@ Rails.application.routes.draw do
   
   get 'about', to: 'static_pages#about'
   get 'contact_page', to: 'static_pages#contact_page'
-  
+    
   resources :contacts
+  resources :users, only: [:new, :create]
   
 end
