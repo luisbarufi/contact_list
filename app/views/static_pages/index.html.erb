@@ -4,7 +4,9 @@
     Gerencie seus cotatos em qual quer lugar!
   </p>
 
+<% unless user_signed_in? %>
   <p>
     <%= link_to 'Crie sua Conta', new_user_path, class: 'btn btn-primary btn-lg' %>
   </p>
+  <% end %>
 </div>

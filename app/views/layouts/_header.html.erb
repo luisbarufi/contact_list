@@ -13,7 +13,7 @@
 
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
-          <% if !user_signed_in? %>
+          <% unless user_signed_in? %>
             <li class="active">
               <%= link_to 'Nova Conta', new_user_path, class: "nav-link"%>
             </li>
@@ -22,7 +22,7 @@
 
         <ul class="navbar-nav navbar-right">
 
-          <% if !user_signed_in? %>
+          <% unless user_signed_in? %>
             <li class="nav-item active">
               <%= link_to 'Entrar', log_in_path, class: "nav-link"  %>
             </li>

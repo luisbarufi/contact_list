@@ -11,7 +11,8 @@
           <th>Telefone</th>
           <th colspan="2">
             Ações
-            <%= link_to 'Novo Contato', new_contact_path, class: "btn btn-success" %>
+            <%= link_to "<i class='fa fa-file' title='Novo Contato'></i>"
+                .html_safe, new_contact_path, class: "btn btn-success" %>
           </th>
         </tr>
       </thead>
@@ -33,10 +34,14 @@
               <%= c.phone %>
             </td>
             <td>
-              <%= link_to 'Editar', edit_contact_path(c), class: 'btn btn-warning' %>
+              <%= link_to "<i class='fa fa-edit ' title='Editar'></i>"
+                  .html_safe, edit_contact_path(c), class: 'btn btn-warning' %>
+              
             </td>
             <td>
-              <%= link_to 'Excluir', contact_path(c), method: :delete, class: 'btn btn-danger', data: { confirm: 'Tem certeza' } %>
+              <%= link_to "<i class='fa fa-trash-alt' title='Excluir'></i>"
+                  .html_safe, contact_path(c), method: :delete, 
+                  class: 'btn btn-danger', data: { confirm: 'Tem certeza' } %>
             </td>
           </tr>
         <% end %>
